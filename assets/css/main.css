@@ -1,2 +1,60 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+:root {
+    --background-color : hsl(212, 43%, 88%);
+    --card-background: hsl(0, 0%, 100%);
+    --Lightgray: hsl(206, 4%, 69%);
+    --Darkblue: hsl(218, 44%, 22%);
+}
+
+body {
+    background: var(--background-color);
+}
+
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 375px;
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.text-1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--Darkblue);
+    padding: 20px 0;
+}
+
+.text-2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--Lightgray);
+}
+
+
+.attribution { 
+    font-size: 11px;
+    margin-top: 25px;
+    visibility: hidden;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.card:hover + .attribution {
+    visibility: visible;
+}
+
